@@ -1,0 +1,18 @@
+# Replit workflow configuration for Autonomous AI-Powered Incident Commander
+# Runs FastAPI backend on port 8000 and Vite frontend on port 3000
+
+run = "sh run.sh"
+entrypoint = "backend/main.py"
+
+[nix]
+channel = "stable-23_11"
+
+[env]
+PYTHONPATH = "."
+PORT = "3000"
+BACKEND_PORT = "8000"
+VITE_API_URL = "http://localhost:8000"
+
+[ports]
+3000 = "Frontend (React / Vite)"
+8000 = "Backend (FastAPI REST API)"
